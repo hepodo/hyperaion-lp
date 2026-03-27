@@ -264,8 +264,6 @@ function initLangToggle() {
   if (!btn) return;
 
   const jaCache = {};
-  let currentLang = 'ja';
-
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     jaCache[key] = el.getAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
@@ -278,9 +276,17 @@ function initLangToggle() {
     'hero.p': 'Don\'t change the model.<br />Build learning and quality infrastructure around it.<br />Like a powered suit amplifies human strength,<br />HyperAION <em>structurally</em> elevates AI capabilities.',
     'hero.cta1': 'See a Demo',
     'hero.cta2': 'View Concept',
+    'hero.trust1': '4 Companies Deployed',
     'hero.trust2': '2 Papers Published',
     'hero.trust3': 'Wan2.6 Official Event Speaker',
     'concept.h2': 'Not fine-tuning.<br />Not RAG. Not a harness.',
+    'term.t1': 'Loading previous session memory...',
+    'term.t2': 'Restored 12 decisions + 3 failure patterns from last session',
+    'term.t3': 'Auto-selected skills: deep-research, context-aware-analyst, meeting-prep',
+    'term.t4': '⟐ Quality Check',
+    'term.t5': 'Output quality gate passed',
+    'term.t6': 'Morning briefing generated — 3 outstanding tasks detected',
+    'term.t7': 'Cross-session learning is active. Even on the 10th session, it never resets to beginner.',
     'concept.lead1': 'The conventional wisdom for AI customization is "retrain the model" or "search external data." Recently, "harnesses" (control structures) are gaining attention — but they all have a ceiling.',
     'concept.lead2': 'HyperAION chose to go <em>beyond</em>. Not just controlling — the structure itself generates quality. Model-independent "intelligence infrastructure."',
     'concept.ft.p': 'Expensive. Massive effort for data prep and retraining. Unrealistic for individuals and SMEs. Start over when the model changes.',
@@ -310,7 +316,7 @@ function initLangToggle() {
     'why.c4.p': 'It can do photography, code, and research — but can\'t deploy the right skill at the right time. Skill selection is broken.',
     'cap.h2': 'What the <span class="gradient-text">Exoskeleton</span> Does',
     'cap.core.h': 'Cross-Session Learning',
-    'cap.core.p': 'Memory persists after conversations end. Failure patterns, decision rationale, discovered insights — all carry over to the next session.<br />The more you use it, the more it becomes your personal AI.',
+    'cap.core.p': 'Memory persists after conversations end. Failure patterns, decision rationale, discovered insights — all carry over.<br />The more you use it, the more it becomes your personal AI.',
     'cap.quality.h': 'Automatic Quality Assurance',
     'cap.quality.p': 'Every output is structurally checked. The exoskeleton corrects quality variance.',
     'cap.emerge.h': 'Emergent Insight',
@@ -325,32 +331,28 @@ function initLangToggle() {
     'cap.foresight.p': 'Integrates external trends, behavior patterns, and time-series data to anticipate what comes next.',
     'proof.h2': 'Track Record & <span class="gradient-text">Evidence</span>',
     'proof.papers.h': 'Published Papers (Zenodo Preprints)',
-    'proof.speaking.h': 'Speaking',
-    'proof.film.h': 'International AI Film Festival Selections',
+    'proof.enterprise.h': 'Deployed at 4 Companies',
+    'proof.enterprise.p': 'Framework provided to 4 enterprises. Exoskeleton configurations customized per workflow.',
+    'proof.speaking.h': 'Speaking Engagements',
+    'proof.film.h': 'Int\'l AI Film Festival Selections',
     'fy.h2': 'Solving Your Challenges, <span class="gradient-text">Concretely</span>.',
     'fy.c1.tag': 'Executives & Business Leaders',
     'fy.c1.h': 'Turn AI Investment into Guaranteed Returns',
-    'fy.c1.p': 'Morning briefings auto-prepare outstanding tasks and decision materials. The AI learns your business workflow, functioning as a "dedicated team" within 2 weeks.',
+    'fy.c1.p': 'Morning briefings auto-prepare outstanding tasks and decision materials. AI learns your workflow, functioning as a "dedicated team" within 2 weeks.',
     'fy.result': 'Impact',
     'fy.c1.result': 'Shorter decision cycles, higher AI utilization, reduced key-person dependency',
     'fy.c2.tag': 'Engineers & Developers',
     'fy.c2.h': 'Free Yourself from Prompt Craftsmanship',
-    'fy.c2.p': 'Cross-session context retention. Quality gates structurally correct output variance. Skills auto-activate when needed, letting humans focus on design decisions.',
+    'fy.c2.p': 'Cross-session context retention. Quality gates structurally correct output. Skills auto-activate, letting humans focus on design decisions.',
     'fy.c2.result': 'Stable code review quality, automatic failure avoidance, tool integration',
     'fy.c3.tag': 'Creators',
-    'fy.c3.h': 'Not "Good Enough" — "Transcend"',
-    'fy.c3.p': 'For photography: a genius photographer\'s eye. For video: a film director\'s composition. Domain-expert skills are auto-selected, raising quality beyond what bare AI can produce.',
-    'fy.c3.result': 'Elevated output quality, workflow automation, style consistency',
+    'fy.c3.h': 'Not "Good Enough" — Transcendent',
+    'fy.c3.p': 'Photography: a genius photographer\'s eye. Video: a film director\'s composition. Domain-expert skills auto-selected to elevate beyond bare AI quality.',
+    'fy.c3.result': 'Output quality uplift, workflow automation, style consistency',
     'cta.h2': 'The Exoskeleton<br /><span class="gradient-text">For Your Team</span>',
     'cta.p': 'See how your workflow transforms in a 30-minute demo.',
     'cta.submit': 'Book a Demo',
   };
-
-  const ja = {};
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    ja[key] = el.getAttribute('data-i18n-html') ? el.innerHTML.trim() : el.textContent.trim();
-  });
 
   const formJa = {
     name: 'お名前', email: 'メールアドレス',
@@ -366,7 +368,7 @@ function initLangToggle() {
   };
 
   function applyLang(lang) {
-    const dict = lang === 'en' ? en : ja;
+    const dict = lang === 'en' ? en : jaCache;
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (!dict[key]) return;
@@ -389,16 +391,15 @@ function initLangToggle() {
 
     const emailP = document.querySelector('.contact-email');
     if (emailP) {
-      const a = emailP.querySelector('a');
       const f = lang === 'en' ? formEn : formJa;
       emailP.childNodes[0].textContent = f.directLabel;
     }
 
     document.documentElement.lang = lang;
-    toggle.textContent = lang === 'en' ? 'JP' : 'EN';
+    btn.textContent = lang === 'en' ? 'JP' : 'EN';
   }
 
-  toggle.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
     const next = document.documentElement.lang === 'ja' ? 'en' : 'ja';
     applyLang(next);
   });
