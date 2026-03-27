@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HyperAION — AIの外骨格</title>
+  <meta name="description" content="HyperAIONはAIの外骨格。ファインチューニングでもRAGでもない第3の道で、AIの学習・品質・スキル選択を構造的に解決する。" />
+  <meta property="og:title" content="HyperAION — AIの外骨格" />
+  <meta property="og:description" content="モデルを変えるのではない。モデルの周りに知性のインフラを置く。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <nav id="nav" class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-h">Hyper</span><span class="logo-a">AION</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#proof">Track Record</a></li>
+        <li><a href="#contact" class="nav-cta-btn">Talk to Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-eyebrow">The Third Path</div>
+      <h1 class="hero-h1">
+        AIの<span class="gradient-text">外骨格。</span>
+      </h1>
+      <p class="hero-p">
+        モデルを変えるのではない。<br />
+        モデルの周りに、学習と品質管理のインフラを置く。<br />
+        パワードスーツが人間の力を増幅するように、<br />
+        HyperAIONはAIの能力を<em>構造的に</em>底上げする。
+      </p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="cta-primary">デモを見る</a>
+        <a href="#concept" class="cta-secondary">
+          <span class="cta-play">▶</span> コンセプトを見る
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span>4社導入済</span>
+        <span class="trust-sep">|</span>
+        <span>論文 2本公開</span>
+        <span class="trust-sep">|</span>
+        <span>Wan2.6公式イベント登壇</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONCEPT ===== -->
+  <section id="concept" class="concept">
+    <div class="container">
+      <div class="concept-split">
+        <div class="concept-left" data-anim>
+          <span class="section-tag">CONCEPT</span>
+          <h2 class="display-heading">
+            ファインチューニングでも<br />RAGでも、ハーネスでもない。
+          </h2>
+          <p class="concept-lead">AIカスタマイズの常識は「モデルの再訓練」か「外部データ検索」。最近は「ハーネス（制御構造）」も注目されているが、どれにも天井がある。</p>
+          <p class="concept-lead">HyperAIONは<em>その先</em>を選んだ。制御するだけでなく、構造そのものが品質を生成する。モデルに依存しない「知性のインフラ」。</p>
+        </div>
+        <div class="concept-right" data-anim>
+          <div class="concept-card concept-card--dead">
+            <div class="concept-card-x">✕</div>
+            <h3>Fine-tuning</h3>
+            <p>高コスト。データ準備にも再訓練にも膨大な工数。個人・中小には非現実的。モデルが変わればやり直し。</p>
+          </div>
+          <div class="concept-card concept-card--dead">
+            <div class="concept-card-x">✕</div>
+            <h3>RAG</h3>
+            <p>「検索」であって「学習」ではない。文脈を引っ張ってくるだけで、AI自体は何も覚えない。品質のブレも直らない。</p>
+          </div>
+          <div class="concept-card concept-card--alive">
+            <div class="concept-card-x concept-card-check">✦</div>
+            <h3>外骨格 / Exoskeleton</h3>
+            <p>ただのハーネス（制御構造）ではない。制御は前提として含みつつ、構造が品質を<em>生成する</em>。異なる視座から出力を押し返し、モデルが自力では到達しない領域に押し上げる。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEMO (Terminal Animation) ===== -->
+  <section id="demo" class="demo">
+    <div class="container">
+      <div class="demo-header" data-anim>
+        <span class="section-tag">IN ACTION</span>
+        <h2 class="display-heading">外骨格が<span class="gradient-text">動く</span>瞬間</h2>
+        <p class="demo-subtitle">同じAIモデルでも、外骨格の有無でこれだけ変わる。</p>
+      </div>
+      <div class="demo-terminal" data-anim>
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+          </div>
+          <span class="terminal-title">hyperaion-session</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="terminal-line" data-delay="0">
+            <span class="t-prompt">$</span>
+            <span class="t-cmd">hyperaion start --session morning-brief</span>
+          </div>
+          <div class="terminal-line" data-delay="800">
+            <span class="t-system">⟐ Bootstrap Gate</span>
+            <span class="t-muted">前回セッション記憶を読み込み中...</span>
+          </div>
+          <div class="terminal-line" data-delay="1600">
+            <span class="t-success">✓</span>
+            <span class="t-text">前回の意思決定 12件 + 失敗パターン 3件 を復元</span>
+          </div>
+          <div class="terminal-line" data-delay="2400">
+            <span class="t-success">✓</span>
+            <span class="t-text">スキル自動選択: deep-research, context-aware-analyst, meeting-prep</span>
+          </div>
+          <div class="terminal-line" data-delay="3200">
+            <span class="t-system">⟐ 品質チェック</span>
+            <span class="t-muted">出力品質ゲートを通過</span>
+          </div>
+          <div class="terminal-line" data-delay="4000">
+            <span class="t-success">✓</span>
+            <span class="t-text">朝のブリーフィング生成完了 — 3つの未対応タスクを検出</span>
+          </div>
+          <div class="terminal-line" data-delay="4800">
+            <span class="t-prompt">$</span>
+            <span class="t-highlight">セッション横断学習が機能しています。10回目も初心者には戻りません。</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-compare" data-anim>
+        <div class="compare-card compare-without">
+          <h4>素のAI</h4>
+          <ul>
+            <li>毎回ゼロから開始</li>
+            <li>同じ失敗を繰り返す</li>
+            <li>品質にムラがある</li>
+            <li>スキルを手動で指示</li>
+          </ul>
+        </div>
+        <div class="compare-arrow">→</div>
+        <div class="compare-card compare-with">
+          <h4>外骨格あり</h4>
+          <ul>
+            <li>前回の記憶を自動復元</li>
+            <li>失敗パターンを構造化学習</li>
+            <li>出力に品質ゲートを適用</li>
+            <li>83スキルが自動発動</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY (Problem) ===== -->
+  <section id="why" class="why">
+    <div class="container">
+      <div class="why-header" data-anim>
+        <span class="section-tag">THE PROBLEM</span>
+        <h2 class="display-heading">
+          AIは賢い。<br />だが10回目も<span class="gradient-text">初心者</span>として振る舞う。
+        </h2>
+      </div>
+      <div class="why-grid">
+        <div class="glass-card" data-anim>
+          <div class="glass-card-num">01</div>
+          <h3>記憶の断絶</h3>
+          <p>セッションが変わるたびに全リセット。前回の文脈も学びも消える。毎回ゼロからやり直し。</p>
+        </div>
+        <div class="glass-card" data-anim>
+          <div class="glass-card-num">02</div>
+          <h3>同じ失敗の反復</h3>
+          <p>昨日否定したアイデアを、今日また自信満々に提案してくる。構造的に学習しないから当然そうなる。</p>
+        </div>
+        <div class="glass-card" data-anim>
+          <div class="glass-card-num">03</div>
+          <h3>品質の不安定</h3>
+          <p>神回の次がゴミ回。同じプロンプトでも出力がブレる。品質を保証する外部メカニズムがない。</p>
+        </div>
+        <div class="glass-card" data-anim>
+          <div class="glass-card-num">04</div>
+          <h3>能力の持ち腐れ</h3>
+          <p>写真もコードもリサーチもできるのに、適切なタイミングで適切な技を出せない。スキル選択が壊れている。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITIES ===== -->
+  <section id="capabilities" class="capabilities">
+    <div class="container">
+      <div class="cap-header" data-anim>
+        <span class="section-tag">CAPABILITIES</span>
+        <h2 class="display-heading">
+          外骨格が装備する<span class="gradient-text">能力</span>
+        </h2>
+      </div>
+      <div class="cap-bento">
+        <div class="bento-hero-card" data-anim>
+          <div class="bento-glow"></div>
+          <div class="bento-tag">CORE</div>
+          <h3>セッション横断学習</h3>
+          <p>会話が終わっても記憶は残る。失敗パターン、意思決定の理由、発見した知見。全てが次のセッションに引き継がれる。<br />使うほど、あなた専用のAIになる。</p>
+          <div class="bento-metrics">
+            <div class="metric"><span class="metric-num">83<span class="metric-plus">+</span></span><span class="metric-label">Skills</span></div>
+            <div class="metric"><span class="metric-num">23</span><span class="metric-label">Workflows</span></div>
+            <div class="metric"><span class="metric-num">∞</span><span class="metric-label">Memory</span></div>
+          </div>
+        </div>
+        <div class="bento-sm" data-anim>
+          <h4>出力品質の自動保証</h4>
+          <p>毎回の出力を構造的にチェック。品質のブレを外骨格が補正する。</p>
+        </div>
+        <div class="bento-sm" data-anim>
+          <h4>創発的ひらめき</h4>
+          <p>異分野の知識を衝突させ、人間もAIも単体では辿りつけない概念を生成する。</p>
+        </div>
+        <div class="bento-sm" data-anim>
+          <h4>凄腕クリエイティブエージェント</h4>
+          <p>写真・音楽・映像のスペシャリスト。エージェントだけで制作した作品が国際AI映画祭に入選。</p>
+        </div>
+        <div class="bento-sm" data-anim>
+          <h4>並列タスク処理</h4>
+          <p>5+のタスクを同時に並列処理。調査も分析もまとめて走らせる。</p>
+        </div>
+        <div class="bento-wide" data-anim>
+          <h4>審美眼</h4>
+          <p>7次元の美的判断ゲートで「これしかない」を選び抜く。量産ではなく、選別によって品質を担保する。</p>
+        </div>
+        <div class="bento-wide" data-anim>
+          <h4>戦略的予測</h4>
+          <p>外部トレンド・行動パターン・時系列データを統合し、「次に何が起きるか」を先読みする。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section id="proof" class="proof">
+    <div class="container">
+      <div class="proof-header" data-anim>
+        <span class="section-tag">TRACK RECORD</span>
+        <h2 class="display-heading">実績と<span class="gradient-text">根拠</span></h2>
+      </div>
+
+
+      <div class="proof-grid">
+        <!-- Papers -->
+        <div class="proof-card proof-card--highlight" data-anim>
+          <div class="proof-icon">📄</div>
+          <h3>公開論文（Zenodo プレプリント）</h3>
+          <div class="proof-papers">
+            <div class="paper">
+              <a class="paper-title" href="https://zenodo.org/records/14887851" target="_blank" rel="noopener">"Cognitive Exoskeletons: External Structure as the Determinant of LLM Output Identity"</a>
+              <span class="paper-meta">Zenodo — LLMの出力同一性を決定する外部構造としての認知的外骨格</span>
+            </div>
+            <div class="paper">
+              <a class="paper-title" href="https://zenodo.org/records/15025857" target="_blank" rel="noopener">"From Theory to Protocol: Executable Frameworks for Creative Emergence and Strategic Foresight"</a>
+              <span class="paper-meta">Zenodo — 創造的創発と戦略的予見のための実行可能なフレームワーク</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="proof-card" data-anim>
+          <div class="proof-icon">🏢</div>
+          <h3>4社で導入稼働中</h3>
+          <p>法人4社にフレームワークを提供。各社の業務フローに合わせ、外骨格の構成をカスタマイズして運用中。</p>
+        </div>
+
+        <!-- Speaking -->
+        <div class="proof-card" data-anim>
+          <div class="proof-icon">🎤</div>
+          <h3>登壇実績</h3>
+          <div class="proof-events">
+            <div class="proof-event">
+              <span class="proof-event-date">2026.03</span>
+              <span class="proof-event-name"><a href="https://www.tencentcloud.com/act/pro/TCDJapan2026" target="_blank" rel="noopener">Tencent Cloud Day Japan 2026</a></span>
+              <span class="proof-event-detail">ウェスティンホテル東京 — NVIDIA, LY Corporation, DeNA等と同日登壇</span>
+            </div>
+            <div class="proof-event">
+              <span class="proof-event-date">2025.12</span>
+              <span class="proof-event-name">Alibaba Cloud Wan2.6 公式ローンチイベント</span>
+              <span class="proof-event-detail">AIフレームワークの実践事例として招待講演</span>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="proof-card" data-anim>
+          <div class="proof-icon">🏅</div>
+          <h3>Alibaba Cloud MVP</h3>
+          <p>クラウドAI活用の技術的貢献が認められ、Alibaba Cloud Most Valuable Professional に選出。</p>
+        </div>
+        -->
+
+        <!-- Film Festival Awards -->
+        <div class="proof-card" data-anim>
+          <div class="proof-icon">🏆</div>
+          <h3>国際AI映画祭 入選</h3>
+          <div class="proof-awards">
+            <div class="proof-award">
+              <span class="award-badge">Selected</span>
+              <span>Subtelny Cinema and AI Festival 入選</span>
+            </div>
+            <div class="proof-award">
+              <span class="award-badge">Selected</span>
+              <span>NeoCinema AI Film Festival 入選</span>
+            </div>
+            <div class="proof-award">
+              <span class="award-badge">QF</span>
+              <span>Hollywood AI Short Film Awards 準々決勝進出</span>
+            </div>
+          </div>
+          <p class="proof-award-note">※ SPECTRA '<a href="https://www.youtube.com/watch?v=ZHCWMrOnniM" target="_blank" rel="noopener">Mirror Pop</a>' M/V — HyperAION + AIクリエイティブパイプラインで制作</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR YOU ===== -->
+  <section id="for-you" class="for-you">
+    <div class="container">
+      <div class="fy-header" data-anim>
+        <span class="section-tag">FOR YOU</span>
+        <h2 class="display-heading">あなたの課題を、<span class="gradient-text">具体的に</span>解決する。</h2>
+      </div>
+      <div class="fy-cards">
+        <div class="fy-card" data-anim>
+          <div class="fy-card-glow fy-glow-1"></div>
+          <span class="fy-tag">経営者・事業責任者</span>
+          <h3>AI投資を確実にリターンに変える</h3>
+          <p>朝のブリーフィングで未対応タスクと意思決定の材料が自動で揃う。AIが御社の業務フローを覚えるから、導入2週間後には「専属チーム」として機能し始める。</p>
+          <div class="fy-result">
+            <span class="fy-result-label">導入効果</span>
+            <span class="fy-result-text">意思決定サイクルの短縮、AI活用率の向上、属人化の解消</span>
+          </div>
+        </div>
+        <div class="fy-card" data-anim>
+          <div class="fy-card-glow fy-glow-2"></div>
+          <span class="fy-tag">技術者・エンジニア</span>
+          <h3>プロンプトの職人芸から解放される</h3>
+          <p>セッション横断でAIが文脈を保持。品質ゲートが出力のブレを構造的に補正。83のスキルが必要な場面で自動起動し、人間は設計判断に集中できる。</p>
+          <div class="fy-result">
+            <span class="fy-result-label">導入効果</span>
+            <span class="fy-result-text">コードレビュー品質の安定化、失敗パターンの自動回避、ツール統合</span>
+          </div>
+        </div>
+        <div class="fy-card" data-anim>
+          <div class="fy-card-glow fy-glow-3"></div>
+          <span class="fy-tag">クリエイター</span>
+          <h3>「それっぽい」ではなく「超える」</h3>
+          <p>写真なら天才写真家の眼、映像なら映画監督の構成力。ドメイン専門スキルが自動で選ばれ、素のAIでは出せない品質まで引き上げる。</p>
+          <div class="fy-result">
+            <span class="fy-result-label">導入効果</span>
+            <span class="fy-result-text">アウトプット品質の底上げ、ワークフロー自動化、スタイル一貫性</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-wrap" data-anim>
+        <div class="contact-orb"></div>
+        <h2 class="contact-h2">
+          外骨格を、<br /><span class="gradient-text">あなたのチームに。</span>
+        </h2>
+        <p class="contact-p">
+          30分のデモで、あなたの業務がどう変わるかお見せします。
+        </p>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="お名前" required class="form-input" />
+            <input type="email" name="email" placeholder="メールアドレス" required class="form-input" />
+          </div>
+          <select name="interest" class="form-input form-select">
+            <option value="" disabled selected>ご関心のある領域</option>
+            <option value="business">経営・事業戦略</option>
+            <option value="engineering">ソフトウェア開発</option>
+            <option value="creative">クリエイティブ制作</option>
+            <option value="research">リサーチ・分析</option>
+            <option value="other">その他</option>
+          </select>
+          <textarea name="message" placeholder="現在のAI活用の課題や、お聞きになりたいこと（任意）" rows="3" class="form-input form-textarea"></textarea>
+          <button type="submit" class="cta-primary cta-primary--lg form-submit">デモを予約する</button>
+        </form>
+        <p class="contact-email">または直接: <a href="mailto:hyperaion.ai+info@gmail.com">hyperaion.ai+info@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">HyperAION</span>
+      </div>
+      <div class="footer-right">
+        <a href="#concept">Concept</a>
+        <a href="#demo">Demo</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#proof">Track Record</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 HyperAION. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
