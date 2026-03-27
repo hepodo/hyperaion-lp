@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initTerminalDemo();
   initFormSubmit();
+  initLangToggle();
 });
 
 /* ===== NEURAL NETWORK CANVAS ===== */
@@ -220,8 +221,9 @@ function initFormSubmit() {
     e.preventDefault();
     const btn = form.querySelector('.form-submit');
     const originalText = btn.textContent;
+    const isEn = document.documentElement.lang === 'en';
 
-    btn.textContent = '送信中...';
+    btn.textContent = isEn ? 'Sending...' : '送信中...';
     btn.disabled = true;
 
     try {
@@ -233,7 +235,7 @@ function initFormSubmit() {
       });
 
       if (response.ok) {
-        btn.textContent = '✓ 送信完了';
+        btn.textContent = isEn ? '✓ Sent!' : '✓ 送信完了';
         btn.style.background = 'linear-gradient(135deg, #28C840, #1a8a2c)';
         form.reset();
         setTimeout(() => {
@@ -245,7 +247,7 @@ function initFormSubmit() {
         throw new Error('Submit failed');
       }
     } catch (err) {
-      btn.textContent = '送信に失敗しました';
+      btn.textContent = isEn ? 'Failed to send' : '送信に失敗しました';
       btn.style.background = 'linear-gradient(135deg, #FF5F57, #cc3a33)';
       setTimeout(() => {
         btn.textContent = originalText;
@@ -255,3 +257,150 @@ function initFormSubmit() {
     }
   });
 }
+
+/* ===== i18n LANGUAGE TOGGLE ===== */
+function initLangToggle() {
+  const btn = document.getElementById('langToggle');
+  if (!btn) return;
+
+  const jaCache = {};
+  let currentLang = 'ja';
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    jaCache[key] = el.getAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
+  });
+
+  const en = {
+    'nav.cta': 'Talk to Us',
+    'hero.eyebrow': 'The Third Path',
+    'hero.h1': 'The <span class="gradient-text">Exoskeleton</span> for AI.',
+    'hero.p': 'Don\'t change the model.<br />Build learning and quality infrastructure around it.<br />Like a powered suit amplifies human strength,<br />HyperAION <em>structurally</em> elevates AI capabilities.',
+    'hero.cta1': 'See a Demo',
+    'hero.cta2': 'View Concept',
+    'hero.trust2': '2 Papers Published',
+    'hero.trust3': 'Wan2.6 Official Event Speaker',
+    'concept.h2': 'Not fine-tuning.<br />Not RAG. Not a harness.',
+    'concept.lead1': 'The conventional wisdom for AI customization is "retrain the model" or "search external data." Recently, "harnesses" (control structures) are gaining attention — but they all have a ceiling.',
+    'concept.lead2': 'HyperAION chose to go <em>beyond</em>. Not just controlling — the structure itself generates quality. Model-independent "intelligence infrastructure."',
+    'concept.ft.p': 'Expensive. Massive effort for data prep and retraining. Unrealistic for individuals and SMEs. Start over when the model changes.',
+    'concept.rag.p': '"Retrieval," not "learning." It pulls context, but the AI itself remembers nothing. Quality variance remains.',
+    'concept.exo.h3': 'Exoskeleton',
+    'concept.exo.p': 'Not just a harness (control structure). Control is a given; the structure <em>generates</em> quality. It pushes back on outputs from multiple perspectives, elevating them to levels the model can\'t reach alone.',
+    'demo.h2': 'The Exoskeleton <span class="gradient-text">in Action</span>',
+    'demo.sub': 'Same AI model. With and without the exoskeleton — this is the difference.',
+    'demo.without': 'Bare AI',
+    'demo.w1': 'Starts from zero every time',
+    'demo.w2': 'Repeats the same mistakes',
+    'demo.w3': 'Inconsistent quality',
+    'demo.w4': 'Skills triggered manually',
+    'demo.with': 'With Exoskeleton',
+    'demo.e1': 'Auto-restores previous memory',
+    'demo.e2': 'Structurally learns failure patterns',
+    'demo.e3': 'Applies quality gates to output',
+    'demo.e4': 'Skills auto-activate',
+    'why.h2': 'AI is smart.<br />But on the 10th session, it still acts like a <span class="gradient-text">beginner</span>.',
+    'why.c1.h': 'Memory Severed',
+    'why.c1.p': 'Full reset every session change. Context and learnings vanish. Back to square one, every time.',
+    'why.c2.h': 'Same Mistakes Repeated',
+    'why.c2.p': 'It confidently proposes the idea you rejected yesterday. No structural learning means this is inevitable.',
+    'why.c3.h': 'Unstable Quality',
+    'why.c3.p': 'A brilliant session followed by garbage. Same prompt, different output. No external mechanism to guarantee quality.',
+    'why.c4.h': 'Wasted Potential',
+    'why.c4.p': 'It can do photography, code, and research — but can\'t deploy the right skill at the right time. Skill selection is broken.',
+    'cap.h2': 'What the <span class="gradient-text">Exoskeleton</span> Does',
+    'cap.core.h': 'Cross-Session Learning',
+    'cap.core.p': 'Memory persists after conversations end. Failure patterns, decision rationale, discovered insights — all carry over to the next session.<br />The more you use it, the more it becomes your personal AI.',
+    'cap.quality.h': 'Automatic Quality Assurance',
+    'cap.quality.p': 'Every output is structurally checked. The exoskeleton corrects quality variance.',
+    'cap.emerge.h': 'Emergent Insight',
+    'cap.emerge.p': 'Cross-domain knowledge collision generates concepts neither humans nor AI can reach alone.',
+    'cap.creative.h': 'Elite Creative Agents',
+    'cap.creative.p': 'Specialists in photography, music, and video. Agent-only works selected for international AI film festivals.',
+    'cap.parallel.h': 'Parallel Task Processing',
+    'cap.parallel.p': '5+ tasks processed simultaneously. Research and analysis run in parallel.',
+    'cap.taste.h': 'Aesthetic Judgment',
+    'cap.taste.p': '7-dimensional aesthetic gate selects "this is the only option." Quality assured by selection, not mass production.',
+    'cap.foresight.h': 'Strategic Foresight',
+    'cap.foresight.p': 'Integrates external trends, behavior patterns, and time-series data to anticipate what comes next.',
+    'proof.h2': 'Track Record & <span class="gradient-text">Evidence</span>',
+    'proof.papers.h': 'Published Papers (Zenodo Preprints)',
+    'proof.speaking.h': 'Speaking',
+    'proof.film.h': 'International AI Film Festival Selections',
+    'fy.h2': 'Solving Your Challenges, <span class="gradient-text">Concretely</span>.',
+    'fy.c1.tag': 'Executives & Business Leaders',
+    'fy.c1.h': 'Turn AI Investment into Guaranteed Returns',
+    'fy.c1.p': 'Morning briefings auto-prepare outstanding tasks and decision materials. The AI learns your business workflow, functioning as a "dedicated team" within 2 weeks.',
+    'fy.result': 'Impact',
+    'fy.c1.result': 'Shorter decision cycles, higher AI utilization, reduced key-person dependency',
+    'fy.c2.tag': 'Engineers & Developers',
+    'fy.c2.h': 'Free Yourself from Prompt Craftsmanship',
+    'fy.c2.p': 'Cross-session context retention. Quality gates structurally correct output variance. Skills auto-activate when needed, letting humans focus on design decisions.',
+    'fy.c2.result': 'Stable code review quality, automatic failure avoidance, tool integration',
+    'fy.c3.tag': 'Creators',
+    'fy.c3.h': 'Not "Good Enough" — "Transcend"',
+    'fy.c3.p': 'For photography: a genius photographer\'s eye. For video: a film director\'s composition. Domain-expert skills are auto-selected, raising quality beyond what bare AI can produce.',
+    'fy.c3.result': 'Elevated output quality, workflow automation, style consistency',
+    'cta.h2': 'The Exoskeleton<br /><span class="gradient-text">For Your Team</span>',
+    'cta.p': 'See how your workflow transforms in a 30-minute demo.',
+    'cta.submit': 'Book a Demo',
+  };
+
+  const ja = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    ja[key] = el.getAttribute('data-i18n-html') ? el.innerHTML.trim() : el.textContent.trim();
+  });
+
+  const formJa = {
+    name: 'お名前', email: 'メールアドレス',
+    interest: ['ご関心のある領域', '経営・事業戦略', 'ソフトウェア開発', 'クリエイティブ制作', 'リサーチ・分析', 'その他'],
+    message: '現在のAI活用の課題や、お聞きになりたいこと（任意）',
+    directLabel: 'または直接: '
+  };
+  const formEn = {
+    name: 'Your Name', email: 'Email Address',
+    interest: ['Area of Interest', 'Business Strategy', 'Software Development', 'Creative Production', 'Research & Analysis', 'Other'],
+    message: 'Current AI challenges or questions (optional)',
+    directLabel: 'Or directly: '
+  };
+
+  function applyLang(lang) {
+    const dict = lang === 'en' ? en : ja;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (!dict[key]) return;
+      if (el.getAttribute('data-i18n-html')) {
+        el.innerHTML = dict[key];
+      } else {
+        el.textContent = dict[key];
+      }
+    });
+
+    const form = document.getElementById('contactForm');
+    if (form) {
+      const f = lang === 'en' ? formEn : formJa;
+      form.querySelector('[name="name"]').placeholder = f.name;
+      form.querySelector('[name="email"]').placeholder = f.email;
+      const opts = form.querySelector('[name="interest"]').options;
+      f.interest.forEach((t, i) => { if (opts[i]) opts[i].textContent = t; });
+      form.querySelector('[name="message"]').placeholder = f.message;
+    }
+
+    const emailP = document.querySelector('.contact-email');
+    if (emailP) {
+      const a = emailP.querySelector('a');
+      const f = lang === 'en' ? formEn : formJa;
+      emailP.childNodes[0].textContent = f.directLabel;
+    }
+
+    document.documentElement.lang = lang;
+    toggle.textContent = lang === 'en' ? 'JP' : 'EN';
+  }
+
+  toggle.addEventListener('click', () => {
+    const next = document.documentElement.lang === 'ja' ? 'en' : 'ja';
+    applyLang(next);
+  });
+}
+

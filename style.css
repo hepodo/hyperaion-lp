@@ -62,7 +62,12 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 .nav-cta-btn:hover{transform:translateY(-1px);box-shadow:0 4px 28px rgba(124,77,255,.45)!important}
 
 .hamburger{display:none;flex-direction:column;gap:5px;padding:8px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
+.hamburger span{display:block;width:20px;height:2px;background:var(--text);margin:4px 0;transition:all .3s}
+
+.lang-toggle{
+  margin-left:8px;
+}
+.lang-toggle:hover{border-color:var(--blue);color:var(--blue)}
 
 /* ===== CTAs ===== */
 .cta-primary{

@@ -25,8 +25,9 @@
         <li><a href="#demo">Demo</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#proof">Track Record</a></li>
-        <li><a href="#contact" class="nav-cta-btn">Talk to Us</a></li>
+        <li><a href="#contact" class="nav-cta-btn" data-i18n="nav.cta">Talk to Us</a></li>
       </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Language">EN</button>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -37,28 +38,28 @@
   <section id="hero" class="hero">
     <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="hero-content">
-      <div class="hero-eyebrow">The Third Path</div>
-      <h1 class="hero-h1">
+      <div class="hero-eyebrow" data-i18n="hero.eyebrow">The Third Path</div>
+      <h1 class="hero-h1" data-i18n="hero.h1" data-i18n-html="1">
         AIの<span class="gradient-text">外骨格。</span>
       </h1>
-      <p class="hero-p">
+      <p class="hero-p" data-i18n="hero.p" data-i18n-html="1">
         モデルを変えるのではない。<br />
         モデルの周りに、学習と品質管理のインフラを置く。<br />
         パワードスーツが人間の力を増幅するように、<br />
         HyperAIONはAIの能力を<em>構造的に</em>底上げする。
       </p>
       <div class="hero-cta-row">
-        <a href="#contact" class="cta-primary">デモを見る</a>
+        <a href="#contact" class="cta-primary" data-i18n="hero.cta1">デモを見る</a>
         <a href="#concept" class="cta-secondary">
-          <span class="cta-play">▶</span> コンセプトを見る
+          <span class="cta-play">▶</span> <span data-i18n="hero.cta2">コンセプトを見る</span>
         </a>
       </div>
       <div class="hero-trust">
-        <span>4社導入済</span>
+        <!--<span data-i18n="hero.trust1">4社導入済</span>
+        <span class="trust-sep">|</span>-->
+        <span data-i18n="hero.trust2">論文 2本公開</span>
         <span class="trust-sep">|</span>
-        <span>論文 2本公開</span>
-        <span class="trust-sep">|</span>
-        <span>Wan2.6公式イベント登壇</span>
+        <span data-i18n="hero.trust3">Wan2.6公式イベント登壇</span>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -72,27 +73,27 @@
       <div class="concept-split">
         <div class="concept-left" data-anim>
           <span class="section-tag">CONCEPT</span>
-          <h2 class="display-heading">
+          <h2 class="display-heading" data-i18n="concept.h2" data-i18n-html="1">
             ファインチューニングでも<br />RAGでも、ハーネスでもない。
           </h2>
-          <p class="concept-lead">AIカスタマイズの常識は「モデルの再訓練」か「外部データ検索」。最近は「ハーネス（制御構造）」も注目されているが、どれにも天井がある。</p>
-          <p class="concept-lead">HyperAIONは<em>その先</em>を選んだ。制御するだけでなく、構造そのものが品質を生成する。モデルに依存しない「知性のインフラ」。</p>
+          <p class="concept-lead" data-i18n="concept.lead1" data-i18n-html="1">AIカスタマイズの常識は「モデルの再訓練」か「外部データ検索」。最近は「ハーネス（制御構造）」も注目されているが、どれにも天井がある。</p>
+          <p class="concept-lead" data-i18n="concept.lead2" data-i18n-html="1">HyperAIONは<em>その先</em>を選んだ。制御するだけでなく、構造そのものが品質を生成する。モデルに依存しない「知性のインフラ」。</p>
         </div>
         <div class="concept-right" data-anim>
           <div class="concept-card concept-card--dead">
             <div class="concept-card-x">✕</div>
             <h3>Fine-tuning</h3>
-            <p>高コスト。データ準備にも再訓練にも膨大な工数。個人・中小には非現実的。モデルが変わればやり直し。</p>
+            <p data-i18n="concept.ft.p">高コスト。データ準備にも再訓練にも膨大な工数。個人・中小には非現実的。モデルが変わればやり直し。</p>
           </div>
           <div class="concept-card concept-card--dead">
             <div class="concept-card-x">✕</div>
             <h3>RAG</h3>
-            <p>「検索」であって「学習」ではない。文脈を引っ張ってくるだけで、AI自体は何も覚えない。品質のブレも直らない。</p>
+            <p data-i18n="concept.rag.p">「検索」であって「学習」ではない。文脈を引っ張ってくるだけで、AI自体は何も覚えない。品質のブレも直らない。</p>
           </div>
           <div class="concept-card concept-card--alive">
             <div class="concept-card-x concept-card-check">✦</div>
-            <h3>外骨格 / Exoskeleton</h3>
-            <p>ただのハーネス（制御構造）ではない。制御は前提として含みつつ、構造が品質を<em>生成する</em>。異なる視座から出力を押し返し、モデルが自力では到達しない領域に押し上げる。</p>
+            <h3 data-i18n="concept.exo.h3">外骨格 / Exoskeleton</h3>
+            <p data-i18n="concept.exo.p" data-i18n-html="1">ただのハーネス（制御構造）ではない。制御は前提として含みつつ、構造が品質を<em>生成する</em>。異なる視座から出力を押し返し、モデルが自力では到達しない領域に押し上げる。</p>
           </div>
         </div>
       </div>
@@ -104,8 +105,8 @@
     <div class="container">
       <div class="demo-header" data-anim>
         <span class="section-tag">IN ACTION</span>
-        <h2 class="display-heading">外骨格が<span class="gradient-text">動く</span>瞬間</h2>
-        <p class="demo-subtitle">同じAIモデルでも、外骨格の有無でこれだけ変わる。</p>
+        <h2 class="display-heading" data-i18n="demo.h2" data-i18n-html="1">外骨格が<span class="gradient-text">動く</span>瞬間</h2>
+        <p class="demo-subtitle" data-i18n="demo.sub">同じAIモデルでも、外骨格の有無でこれだけ変わる。</p>
       </div>
       <div class="demo-terminal" data-anim>
         <div class="terminal-bar">
@@ -149,22 +150,22 @@
       </div>
       <div class="demo-compare" data-anim>
         <div class="compare-card compare-without">
-          <h4>素のAI</h4>
+          <h4 data-i18n="demo.without">素のAI</h4>
           <ul>
-            <li>毎回ゼロから開始</li>
-            <li>同じ失敗を繰り返す</li>
-            <li>品質にムラがある</li>
-            <li>スキルを手動で指示</li>
+            <li data-i18n="demo.w1">毎回ゼロから開始</li>
+            <li data-i18n="demo.w2">同じ失敗を繰り返す</li>
+            <li data-i18n="demo.w3">品質にムラがある</li>
+            <li data-i18n="demo.w4">スキルを手動で指示</li>
           </ul>
         </div>
         <div class="compare-arrow">→</div>
         <div class="compare-card compare-with">
-          <h4>外骨格あり</h4>
+          <h4 data-i18n="demo.with">外骨格あり</h4>
           <ul>
-            <li>前回の記憶を自動復元</li>
-            <li>失敗パターンを構造化学習</li>
-            <li>出力に品質ゲートを適用</li>
-            <li>83スキルが自動発動</li>
+            <li data-i18n="demo.e1">前回の記憶を自動復元</li>
+            <li data-i18n="demo.e2">失敗パターンを構造化学習</li>
+            <li data-i18n="demo.e3">出力に品質ゲートを適用</li>
+            <li data-i18n="demo.e4">スキルが自動発動</li>
           </ul>
         </div>
       </div>
@@ -176,30 +177,30 @@
     <div class="container">
       <div class="why-header" data-anim>
         <span class="section-tag">THE PROBLEM</span>
-        <h2 class="display-heading">
+        <h2 class="display-heading" data-i18n="why.h2" data-i18n-html="1">
           AIは賢い。<br />だが10回目も<span class="gradient-text">初心者</span>として振る舞う。
         </h2>
       </div>
       <div class="why-grid">
         <div class="glass-card" data-anim>
           <div class="glass-card-num">01</div>
-          <h3>記憶の断絶</h3>
-          <p>セッションが変わるたびに全リセット。前回の文脈も学びも消える。毎回ゼロからやり直し。</p>
+          <h3 data-i18n="why.c1.h">記憶の断絶</h3>
+          <p data-i18n="why.c1.p">セッションが変わるたびに全リセット。前回の文脈も学びも消える。毎回ゼロからやり直し。</p>
         </div>
         <div class="glass-card" data-anim>
           <div class="glass-card-num">02</div>
-          <h3>同じ失敗の反復</h3>
-          <p>昨日否定したアイデアを、今日また自信満々に提案してくる。構造的に学習しないから当然そうなる。</p>
+          <h3 data-i18n="why.c2.h">同じ失敗の反復</h3>
+          <p data-i18n="why.c2.p">昨日否定したアイデアを、今日また自信満々に提案してくる。構造的に学習しないから当然そうなる。</p>
         </div>
         <div class="glass-card" data-anim>
           <div class="glass-card-num">03</div>
-          <h3>品質の不安定</h3>
-          <p>神回の次がゴミ回。同じプロンプトでも出力がブレる。品質を保証する外部メカニズムがない。</p>
+          <h3 data-i18n="why.c3.h">品質の不安定</h3>
+          <p data-i18n="why.c3.p">神回の次がゴミ回。同じプロンプトでも出力がブレる。品質を保証する外部メカニズムがない。</p>
         </div>
         <div class="glass-card" data-anim>
           <div class="glass-card-num">04</div>
-          <h3>能力の持ち腐れ</h3>
-          <p>写真もコードもリサーチもできるのに、適切なタイミングで適切な技を出せない。スキル選択が壊れている。</p>
+          <h3 data-i18n="why.c4.h">能力の持ち腐れ</h3>
+          <p data-i18n="why.c4.p">写真もコードもリサーチもできるのに、適切なタイミングで適切な技を出せない。スキル選択が壊れている。</p>
         </div>
       </div>
     </div>
@@ -259,7 +260,7 @@
     <div class="container">
       <div class="proof-header" data-anim>
         <span class="section-tag">TRACK RECORD</span>
-        <h2 class="display-heading">実績と<span class="gradient-text">根拠</span></h2>
+        <h2 class="display-heading" data-i18n="proof.h2" data-i18n-html="1">実績と<span class="gradient-text">根拠</span></h2>
       </div>
 
 
@@ -267,7 +268,7 @@
         <!-- Papers -->
         <div class="proof-card proof-card--highlight" data-anim>
           <div class="proof-icon">📄</div>
-          <h3>公開論文（Zenodo プレプリント）</h3>
+          <h3 data-i18n="proof.papers.h">公開論文（Zenodo プレプリント）</h3>
           <div class="proof-papers">
             <div class="paper">
               <a class="paper-title" href="https://zenodo.org/records/14887851" target="_blank" rel="noopener">"Cognitive Exoskeletons: External Structure as the Determinant of LLM Output Identity"</a>
@@ -280,17 +281,18 @@
           </div>
         </div>
 
-        <!-- Enterprise -->
+        <!--
         <div class="proof-card" data-anim>
           <div class="proof-icon">🏢</div>
-          <h3>4社で導入稼働中</h3>
-          <p>法人4社にフレームワークを提供。各社の業務フローに合わせ、外骨格の構成をカスタマイズして運用中。</p>
+          <h3 data-i18n="proof.enterprise.h">4社で導入稼働中</h3>
+          <p data-i18n="proof.enterprise.p">法人4社にフレームワークを提供。各社の業務フローに合わせ、外骨格の構成をカスタマイズして運用中。</p>
         </div>
+        -->
 
         <!-- Speaking -->
         <div class="proof-card" data-anim>
           <div class="proof-icon">🎤</div>
-          <h3>登壇実績</h3>
+          <h3 data-i18n="proof.speaking.h">登壇実績</h3>
           <div class="proof-events">
             <div class="proof-event">
               <span class="proof-event-date">2026.03</span>
@@ -316,7 +318,7 @@
         <!-- Film Festival Awards -->
         <div class="proof-card" data-anim>
           <div class="proof-icon">🏆</div>
-          <h3>国際AI映画祭 入選</h3>
+          <h3 data-i18n="proof.film.h">国際AI映画祭 入選</h3>
           <div class="proof-awards">
             <div class="proof-award">
               <span class="award-badge">Selected</span>
@@ -342,37 +344,37 @@
     <div class="container">
       <div class="fy-header" data-anim>
         <span class="section-tag">FOR YOU</span>
-        <h2 class="display-heading">あなたの課題を、<span class="gradient-text">具体的に</span>解決する。</h2>
+        <h2 class="display-heading" data-i18n="fy.h2" data-i18n-html="1">あなたの課題を、<span class="gradient-text">具体的に</span>解決する。</h2>
       </div>
       <div class="fy-cards">
         <div class="fy-card" data-anim>
           <div class="fy-card-glow fy-glow-1"></div>
-          <span class="fy-tag">経営者・事業責任者</span>
-          <h3>AI投資を確実にリターンに変える</h3>
-          <p>朝のブリーフィングで未対応タスクと意思決定の材料が自動で揃う。AIが御社の業務フローを覚えるから、導入2週間後には「専属チーム」として機能し始める。</p>
+          <span class="fy-tag" data-i18n="fy.c1.tag">経営者・事業責任者</span>
+          <h3 data-i18n="fy.c1.h">AI投資を確実にリターンに変える</h3>
+          <p data-i18n="fy.c1.p">朝のブリーフィングで未対応タスクと意思決定の材料が自動で揃う。AIが御社の業務フローを覚えるから、導入2週間後には「専属チーム」として機能し始める。</p>
           <div class="fy-result">
-            <span class="fy-result-label">導入効果</span>
-            <span class="fy-result-text">意思決定サイクルの短縮、AI活用率の向上、属人化の解消</span>
+            <span class="fy-result-label" data-i18n="fy.result">導入効果</span>
+            <span class="fy-result-text" data-i18n="fy.c1.result">意思決定サイクルの短縮、AI活用率の向上、属人化の解消</span>
           </div>
         </div>
         <div class="fy-card" data-anim>
           <div class="fy-card-glow fy-glow-2"></div>
-          <span class="fy-tag">技術者・エンジニア</span>
-          <h3>プロンプトの職人芸から解放される</h3>
-          <p>セッション横断でAIが文脈を保持。品質ゲートが出力のブレを構造的に補正。83のスキルが必要な場面で自動起動し、人間は設計判断に集中できる。</p>
+          <span class="fy-tag" data-i18n="fy.c2.tag">技術者・エンジニア</span>
+          <h3 data-i18n="fy.c2.h">プロンプトの職人芸から解放される</h3>
+          <p data-i18n="fy.c2.p">セッション横断でAIが文脈を保持。品質ゲートが出力のブレを構造的に補正。スキルが必要な場面で自動起動し、人間は設計判断に集中できる。</p>
           <div class="fy-result">
-            <span class="fy-result-label">導入効果</span>
-            <span class="fy-result-text">コードレビュー品質の安定化、失敗パターンの自動回避、ツール統合</span>
+            <span class="fy-result-label" data-i18n="fy.result">導入効果</span>
+            <span class="fy-result-text" data-i18n="fy.c2.result">コードレビュー品質の安定化、失敗パターンの自動回避、ツール統合</span>
           </div>
         </div>
         <div class="fy-card" data-anim>
           <div class="fy-card-glow fy-glow-3"></div>
-          <span class="fy-tag">クリエイター</span>
-          <h3>「それっぽい」ではなく「超える」</h3>
-          <p>写真なら天才写真家の眼、映像なら映画監督の構成力。ドメイン専門スキルが自動で選ばれ、素のAIでは出せない品質まで引き上げる。</p>
+          <span class="fy-tag" data-i18n="fy.c3.tag">クリエイター</span>
+          <h3 data-i18n="fy.c3.h">「それっぽい」ではなく「超える」</h3>
+          <p data-i18n="fy.c3.p">写真なら天才写真家の眼、映像なら映画監督の構成力。ドメイン専門スキルが自動で選ばれ、素のAIでは出せない品質まで引き上げる。</p>
           <div class="fy-result">
-            <span class="fy-result-label">導入効果</span>
-            <span class="fy-result-text">アウトプット品質の底上げ、ワークフロー自動化、スタイル一貫性</span>
+            <span class="fy-result-label" data-i18n="fy.result">導入効果</span>
+            <span class="fy-result-text" data-i18n="fy.c3.result">アウトプット品質の底上げ、ワークフロー自動化、スタイル一貫性</span>
           </div>
         </div>
       </div>
@@ -384,10 +386,10 @@
     <div class="container">
       <div class="contact-wrap" data-anim>
         <div class="contact-orb"></div>
-        <h2 class="contact-h2">
-          外骨格を、<br /><span class="gradient-text">あなたのチームに。</span>
+        <h2 class="contact-h2" data-i18n="cta.h2" data-i18n-html="1">
+          外骨格を<br /><span class="gradient-text">あなたのチームに</span>
         </h2>
-        <p class="contact-p">
+        <p class="contact-p" data-i18n="cta.p">
           30分のデモで、あなたの業務がどう変わるかお見せします。
         </p>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
@@ -404,7 +406,7 @@
             <option value="other">その他</option>
           </select>
           <textarea name="message" placeholder="現在のAI活用の課題や、お聞きになりたいこと（任意）" rows="3" class="form-input form-textarea"></textarea>
-          <button type="submit" class="cta-primary cta-primary--lg form-submit">デモを予約する</button>
+          <button type="submit" class="cta-primary cta-primary--lg form-submit" data-i18n="cta.submit">デモを予約する</button>
         </form>
         <p class="contact-email">または直接: <a href="mailto:hyperaion.ai+info@gmail.com">hyperaion.ai+info@gmail.com</a></p>
       </div>
