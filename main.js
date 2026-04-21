@@ -340,7 +340,7 @@ function initLangToggle() {
     'proof.paper1.meta': 'arXiv:2604.09597 (cs.AI) — Executable frameworks for creative emergence and strategic foresight',
     'proof.paper2.meta': 'Zenodo — Cognitive exoskeletons as external structure determining LLM output identity',
     'proof.paper3.meta': 'Zenodo — The TASTE Layer for aesthetic selection in AI creative production',
-    'proof.ev0.name': 'Alibaba Cloud Wan2.7 Official Launch Event',
+    'proof.ev0.name': '<a href="https://youtu.be/rEAANSefOyU?si=e2kfQN3PwLehjX1b" target="_blank" rel="noopener">Alibaba Cloud Wan2.7 Official Launch Event</a>',
     'proof.ev0.detail': 'Invited talk at Wan2.7 official launch event',
     'proof.ev1.detail': 'The Westin Hotel Tokyo — Co-speakers: NVIDIA, LY Corporation, DeNA, etc.',
     'proof.ev2.name': 'Alibaba Cloud Wan2.6 Official Launch Event',
