@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:deploy": "vite build && mkdir -p dist/hyperaion/lp && cp -r dist/assets dist/hyperaion/lp/ && cp dist/index.html dist/hyperaion/lp/ && rm -rf dist/assets dist/index.html",
     "preview": "vite preview"
   },
   "devDependencies": {
