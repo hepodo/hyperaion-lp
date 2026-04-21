@@ -1,13 +1,14 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-
-    if (url.pathname.startsWith('/hyperaion/lp')) {
-      const stripped = url.pathname.replace(/^\/hyperaion\/lp\/?/, '/');
-      const assetUrl = new URL(stripped || '/', url.origin);
-      return env.ASSETS.fetch(assetUrl);
+    const response = await env.ASSETS.fetch(request);
+    if (response.status !== 404) {
+      return response;
     }
-
-    return new Response('Not Found', { status: 404 });
+    if (url.pathname.endsWith('/')) {
+      const indexUrl = new URL(url.pathname + 'index.html', url.origin);
+      return env.ASSETS.fetch(indexUrl);
+    }
+    return response;
   }
 };
