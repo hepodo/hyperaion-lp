@@ -1,14 +1,13 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const response = await env.ASSETS.fetch(request);
-    if (response.status !== 404) {
-      return response;
+    let pathname = url.pathname;
+
+    if (pathname.endsWith('/')) {
+      pathname += 'index.html';
     }
-    if (url.pathname.endsWith('/')) {
-      const indexUrl = new URL(url.pathname + 'index.html', url.origin);
-      return env.ASSETS.fetch(indexUrl);
-    }
-    return response;
+
+    const assetUrl = new URL(pathname, url.origin);
+    return env.ASSETS.fetch(new Request(assetUrl, request));
   }
 };
