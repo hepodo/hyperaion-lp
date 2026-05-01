@@ -415,13 +415,17 @@ function initLangToggle() {
   };
 
   const formJa = {
-    name: 'お名前', email: 'メールアドレス',
-    message: 'AI活用の課題や、相談したいこと',
+    name: 'お名前', email: 'メールアドレス', company: '会社名・チーム名',
+    purpose: ['主な目的', '経営・事業戦略', 'ソフトウェア開発', 'クリエイティブ制作', 'リサーチ・分析', 'その他'],
+    timing: ['検討時期', 'すぐ相談したい', '3ヶ月以内', '情報収集中'],
+    message: '現在のAI活用の課題や、お聞きになりたいこと',
     directLabel: 'または直接: '
   };
   const formEn = {
-    name: 'Your Name', email: 'Email Address',
-    message: 'Your AI workflow challenge or consultation topic',
+    name: 'Your Name', email: 'Email Address', company: 'Company or Team',
+    purpose: ['Primary Goal', 'Business Strategy', 'Software Development', 'Creative Production', 'Research & Analysis', 'Other'],
+    timing: ['Timeline', 'As soon as possible', 'Within 3 months', 'Researching options'],
+    message: 'Your current AI workflow challenge or question',
     directLabel: 'Or directly: '
   };
 
@@ -442,6 +446,11 @@ function initLangToggle() {
       const f = lang === 'en' ? formEn : formJa;
       form.querySelector('[name="name"]').placeholder = f.name;
       form.querySelector('[name="email"]').placeholder = f.email;
+      form.querySelector('[name="company"]').placeholder = f.company;
+      const purposeOpts = form.querySelector('[name="purpose"]').options;
+      f.purpose.forEach((t, i) => { if (purposeOpts[i]) purposeOpts[i].textContent = t; });
+      const timingOpts = form.querySelector('[name="timing"]').options;
+      f.timing.forEach((t, i) => { if (timingOpts[i]) timingOpts[i].textContent = t; });
       form.querySelector('[name="message"]').placeholder = f.message;
     }
 

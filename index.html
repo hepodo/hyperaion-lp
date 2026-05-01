@@ -687,12 +687,30 @@
         <p class="contact-p" data-i18n="cta.p">
           AI活用の課題を確認し、外骨格で改善できる領域を診断します。
         </p>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+        <form class="contact-form" id="contactForm" action="/contact" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="お名前" required class="form-input" />
             <input type="email" name="email" placeholder="メールアドレス" required class="form-input" />
           </div>
-          <textarea name="message" placeholder="AI活用の課題や、相談したいこと" rows="3" required class="form-input form-textarea"></textarea>
+          <input type="text" name="company" placeholder="会社名・チーム名" required class="form-input" />
+          <div class="form-row">
+            <select name="purpose" class="form-input form-select" required>
+              <option value="" disabled selected>主な目的</option>
+              <option value="business">経営・事業戦略</option>
+              <option value="engineering">ソフトウェア開発</option>
+              <option value="creative">クリエイティブ制作</option>
+              <option value="research">リサーチ・分析</option>
+              <option value="other">その他</option>
+            </select>
+            <select name="timing" class="form-input form-select" required>
+              <option value="" disabled selected>検討時期</option>
+              <option value="now">すぐ相談したい</option>
+              <option value="quarter">3ヶ月以内</option>
+              <option value="research">情報収集中</option>
+            </select>
+          </div>
+          <textarea name="message" placeholder="現在のAI活用の課題や、お聞きになりたいこと" rows="3" required class="form-input form-textarea"></textarea>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="form-hp" aria-hidden="true" />
           <button type="submit" class="cta-primary cta-primary--lg form-submit" data-i18n="cta.submit">導入相談を申し込む</button>
         </form>
         <p class="contact-email">または直接: <a href="mailto:info@aionexo.com">info@aionexo.com</a></p>
