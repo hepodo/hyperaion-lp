@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:deploy": "vite build && mkdir -p dist/hyperaion dist/hyperaion/lp && cp dist/index.html dist/hyperaion/index.html && printf '%s' '<!DOCTYPE html><html lang=\"ja\"><head><meta charset=\"UTF-8\"><meta name=\"robots\" content=\"noindex\"><link rel=\"canonical\" href=\"https://aionexo.com/hyperaion/\"><meta http-equiv=\"refresh\" content=\"0; url=/hyperaion/\"><script>location.replace(\"/hyperaion/\"+location.search+location.hash)</script></head><body><a href=\"/hyperaion/\">HyperAION</a></body></html>' > dist/hyperaion/lp/index.html",
+    "logs": "wrangler tail hyperaion-lp --format pretty --sampling-rate 1 --search analytics_pageview",
     "preview": "vite preview"
   },
   "devDependencies": {

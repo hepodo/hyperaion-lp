@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTerminalDemo();
   initFormSubmit();
   initLangToggle();
+  initAnalytics();
 });
 
 /* ===== NEURAL NETWORK CANVAS ===== */
@@ -257,6 +258,22 @@ function initFormSubmit() {
         btn.disabled = false;
       }, 3000);
     }
+  });
+}
+
+function trackEvent(event, detail = {}) {
+  const payload = JSON.stringify({ event, path: location.pathname, ...detail });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon('/analytics', new Blob([payload], { type: 'application/json' }));
+    return;
+  }
+  fetch('/analytics', { method: 'POST', body: payload, keepalive: true });
+}
+
+function initAnalytics() {
+  trackEvent('page_view');
+  document.querySelectorAll('a[href="#contact"], .cta-primary, .nav-cta-btn').forEach(el => {
+    el.addEventListener('click', () => trackEvent('cta_click', { label: el.textContent.trim() }));
   });
 }
 
