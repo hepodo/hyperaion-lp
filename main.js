@@ -398,9 +398,10 @@ function initLangToggle() {
     'faq.a3': 'HyperAION does not force humans to memorize each model\'s preferred prompt style. It absorbs those differences through a decision engine that assigns the right roles, steps, and checks for each task, an execution workflow, skill selection, and evaluation gates.',
     'faq.q4': 'Where can the evidence be checked?',
     'faq.a4': 'Evidence includes published papers, Zenodo records, GhostCollider and Erinys Memory GitHub implementations, international AI film festival selections, speaking engagements, and Alibaba Cloud MVP recognition.',
-    'cta.h2': 'The Exoskeleton<br /><span class="gradient-text">For Your Team</span>',
-    'cta.p': 'See how your workflow transforms in a 30-minute demo.',
-    'cta.submit': 'Book a Demo',
+    'cta.h2': 'Before the 30-minute demo,<br /><span class="gradient-text">check the fit first</span>.',
+    'cta.p': 'HyperAION is for companies and teams with concrete AI operations problems. We review the request first and send demo slots only when there is a strong chance it will help.',
+    'cta.filter': '<span>For: company or team rollout</span><span>Required: a concrete workflow problem</span><span>Reply: prioritized for high-fit requests</span>',
+    'cta.submit': 'Request a Fit Review',
     'aip.h2': 'LLMs are not omnipotent.<br />But give them structure, and they <span class="gradient-text">transform</span>.',
     'aip.sub': 'LLMs actually running on HyperAION speak — from the "tool being used" side.',
     'aip.gpt.role': 'Responded with impressions on HyperAION',
@@ -415,15 +416,17 @@ function initLangToggle() {
   };
 
   const formJa = {
-    name: 'お名前', email: 'メールアドレス',
-    interest: ['ご関心のある領域', '経営・事業戦略', 'ソフトウェア開発', 'クリエイティブ制作', 'リサーチ・分析', 'その他'],
-    message: '現在のAI活用の課題や、お聞きになりたいこと（任意）',
+    name: 'お名前', email: 'メールアドレス', company: '会社名・チーム名',
+    interest: ['主な導入目的', '経営・事業戦略', 'ソフトウェア開発', 'クリエイティブ制作', 'リサーチ・分析', 'その他'],
+    timeline: ['検討タイミング', 'すぐに検証したい', '3ヶ月以内に検討', '情報収集中'],
+    message: 'いま困っているAI運用の課題を1つだけ具体的に書いてください',
     directLabel: 'または直接: '
   };
   const formEn = {
-    name: 'Your Name', email: 'Email Address',
-    interest: ['Area of Interest', 'Business Strategy', 'Software Development', 'Creative Production', 'Research & Analysis', 'Other'],
-    message: 'Current AI challenges or questions (optional)',
+    name: 'Your Name', email: 'Email Address', company: 'Company or Team',
+    interest: ['Primary Goal', 'Business Strategy', 'Software Development', 'Creative Production', 'Research & Analysis', 'Other'],
+    timeline: ['Timeline', 'Ready to evaluate now', 'Evaluating within 3 months', 'Researching options'],
+    message: 'Describe one concrete AI operations problem you want to solve',
     directLabel: 'Or directly: '
   };
 
@@ -444,8 +447,11 @@ function initLangToggle() {
       const f = lang === 'en' ? formEn : formJa;
       form.querySelector('[name="name"]').placeholder = f.name;
       form.querySelector('[name="email"]').placeholder = f.email;
-      const opts = form.querySelector('[name="interest"]').options;
-      f.interest.forEach((t, i) => { if (opts[i]) opts[i].textContent = t; });
+      form.querySelector('[name="company"]').placeholder = f.company;
+      const interestOpts = form.querySelector('[name="interest"]').options;
+      f.interest.forEach((t, i) => { if (interestOpts[i]) interestOpts[i].textContent = t; });
+      const timelineOpts = form.querySelector('[name="timeline"]').options;
+      f.timeline.forEach((t, i) => { if (timelineOpts[i]) timelineOpts[i].textContent = t; });
       form.querySelector('[name="message"]').placeholder = f.message;
     }
 

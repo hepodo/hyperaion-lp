@@ -682,26 +682,38 @@
       <div class="contact-wrap" data-anim>
         <div class="contact-orb"></div>
         <h2 class="contact-h2" data-i18n="cta.h2" data-i18n-html="1">
-          外骨格を<br /><span class="gradient-text">あなたのチームに</span>
+          30分デモの前に<br /><span class="gradient-text">導入適性を確認する</span>
         </h2>
         <p class="contact-p" data-i18n="cta.p">
-          30分のデモで、あなたの業務がどう変わるかお見せします。
+          HyperAIONは、具体的なAI運用課題がある法人・チーム向けです。内容を確認し、効果が見込める場合のみ30分デモの候補日をご案内します。
         </p>
+        <div class="contact-filter" data-i18n="cta.filter" data-i18n-html="1">
+          <span>対象: 法人・チーム導入</span>
+          <span>必須: 具体的な業務課題</span>
+          <span>返信: 効果が見込める相談を優先</span>
+        </div>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="お名前" required class="form-input" />
             <input type="email" name="email" placeholder="メールアドレス" required class="form-input" />
           </div>
-          <select name="interest" class="form-input form-select">
-            <option value="" disabled selected>ご関心のある領域</option>
+          <input type="text" name="company" placeholder="会社名・チーム名" required class="form-input" />
+          <select name="interest" class="form-input form-select" required>
+            <option value="" disabled selected>主な導入目的</option>
             <option value="business">経営・事業戦略</option>
             <option value="engineering">ソフトウェア開発</option>
             <option value="creative">クリエイティブ制作</option>
             <option value="research">リサーチ・分析</option>
             <option value="other">その他</option>
           </select>
-          <textarea name="message" placeholder="現在のAI活用の課題や、お聞きになりたいこと（任意）" rows="3" class="form-input form-textarea"></textarea>
-          <button type="submit" class="cta-primary cta-primary--lg form-submit" data-i18n="cta.submit">デモを予約する</button>
+          <select name="timeline" class="form-input form-select" required>
+            <option value="" disabled selected>検討タイミング</option>
+            <option value="now">すぐに検証したい</option>
+            <option value="quarter">3ヶ月以内に検討</option>
+            <option value="research">情報収集中</option>
+          </select>
+          <textarea name="message" placeholder="いま困っているAI運用の課題を1つだけ具体的に書いてください" rows="4" required class="form-input form-textarea"></textarea>
+          <button type="submit" class="cta-primary cta-primary--lg form-submit" data-i18n="cta.submit">導入適性レビューを依頼する</button>
         </form>
         <p class="contact-email">または直接: <a href="mailto:info@aionexo.com">info@aionexo.com</a></p>
       </div>
