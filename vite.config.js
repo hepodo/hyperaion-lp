@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/hyperaion/',
+  base: '/',
   plugins: [
     {
       name: 'hyperaion-legacy-local-redirect',
