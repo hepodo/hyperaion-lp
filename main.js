@@ -398,10 +398,9 @@ function initLangToggle() {
     'faq.a3': 'HyperAION does not force humans to memorize each model\'s preferred prompt style. It absorbs those differences through a decision engine that assigns the right roles, steps, and checks for each task, an execution workflow, skill selection, and evaluation gates.',
     'faq.q4': 'Where can the evidence be checked?',
     'faq.a4': 'Evidence includes published papers, Zenodo records, GhostCollider and Erinys Memory GitHub implementations, international AI film festival selections, speaking engagements, and Alibaba Cloud MVP recognition.',
-    'cta.h2': 'Tell us what<br /><span class="gradient-text">you want to fix</span>.',
-    'cta.p': 'Send your company, use case, and current AI workflow problem. If HyperAION looks useful for it, we will reply with 30-minute demo slots.',
-    'cta.filter': '<span>For companies and teams</span><span>Concrete problems help us respond faster</span><span>We reply where we can be useful</span>',
-    'cta.submit': 'Send the Details',
+    'cta.h2': 'The Exoskeleton<br /><span class="gradient-text">For Your Team</span>',
+    'cta.p': 'We review your AI workflow challenges and diagnose where the exoskeleton can improve them.',
+    'cta.submit': 'Request a Consultation',
     'aip.h2': 'LLMs are not omnipotent.<br />But give them structure, and they <span class="gradient-text">transform</span>.',
     'aip.sub': 'LLMs actually running on HyperAION speak — from the "tool being used" side.',
     'aip.gpt.role': 'Responded with impressions on HyperAION',
@@ -416,17 +415,13 @@ function initLangToggle() {
   };
 
   const formJa = {
-    name: 'お名前', email: 'メールアドレス', company: '会社名・チーム名',
-    interest: ['主な導入目的', '経営・事業戦略', 'ソフトウェア開発', 'クリエイティブ制作', 'リサーチ・分析', 'その他'],
-    timeline: ['検討タイミング', 'すぐに検証したい', '3ヶ月以内に検討', '情報収集中'],
-    message: 'いま困っているAI運用の課題を1つだけ具体的に書いてください',
+    name: 'お名前', email: 'メールアドレス',
+    message: 'AI活用の課題や、相談したいこと',
     directLabel: 'または直接: '
   };
   const formEn = {
-    name: 'Your Name', email: 'Email Address', company: 'Company or Team',
-    interest: ['Primary Goal', 'Business Strategy', 'Software Development', 'Creative Production', 'Research & Analysis', 'Other'],
-    timeline: ['Timeline', 'Ready to evaluate now', 'Evaluating within 3 months', 'Researching options'],
-    message: 'Describe one concrete AI operations problem you want to solve',
+    name: 'Your Name', email: 'Email Address',
+    message: 'Your AI workflow challenge or consultation topic',
     directLabel: 'Or directly: '
   };
 
@@ -447,11 +442,6 @@ function initLangToggle() {
       const f = lang === 'en' ? formEn : formJa;
       form.querySelector('[name="name"]').placeholder = f.name;
       form.querySelector('[name="email"]').placeholder = f.email;
-      form.querySelector('[name="company"]').placeholder = f.company;
-      const interestOpts = form.querySelector('[name="interest"]').options;
-      f.interest.forEach((t, i) => { if (interestOpts[i]) interestOpts[i].textContent = t; });
-      const timelineOpts = form.querySelector('[name="timeline"]').options;
-      f.timeline.forEach((t, i) => { if (timelineOpts[i]) timelineOpts[i].textContent = t; });
       form.querySelector('[name="message"]').placeholder = f.message;
     }
 
