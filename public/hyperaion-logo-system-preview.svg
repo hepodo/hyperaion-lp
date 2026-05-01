@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" fill="none" role="img" aria-label="HyperAION logo system preview">
+  <title>HyperAION logo system preview</title>
+  <rect width="960" height="260" fill="#06060E"/>
+  <rect y="260" width="960" height="260" fill="#FFFFFF"/>
+
+  <g transform="translate(106 78)">
+    <path d="M9 62L20 25L33 48L48 5L63 48L76 25L87 62H70L62 45L48 58L34 45L26 62H9Z" fill="#EAEAF0"/>
+    <path d="M48 5L63 48L57 43L48 18L39 43L33 48L48 5Z" fill="#FFFFFF"/>
+    <path d="M34 45L48 58L62 45L56 62H40L34 45Z" fill="#C9D2DF"/>
+    <circle cx="48" cy="70" r="6" fill="#FFD740"/>
+    <path d="M72 30L81 62H76L67 38L72 30Z" fill="#00E5FF" fill-opacity=".72"/>
+  </g>
+  <text x="212" y="125" font-family="Arial" font-size="38" font-weight="800" letter-spacing="-1.1"><tspan fill="#EAEAF0">Hyper</tspan><tspan fill="#CDEFF6">AION</tspan></text>
+
+  <g transform="translate(640 58) scale(1.35)">
+    <path d="M9 62L20 25L33 48L48 5L63 48L76 25L87 62H70L62 45L48 58L34 45L26 62H9Z" fill="#EAEAF0"/>
+    <path d="M48 5L63 48L57 43L48 18L39 43L33 48L48 5Z" fill="#FFFFFF"/>
+    <path d="M34 45L48 58L62 45L56 62H40L34 45Z" fill="#C9D2DF"/>
+    <circle cx="48" cy="70" r="6" fill="#FFD740"/>
+    <path d="M72 30L81 62H76L67 38L72 30Z" fill="#00E5FF" fill-opacity=".72"/>
+  </g>
+
+  <g transform="translate(106 338)">
+    <path d="M9 62L20 25L33 48L48 5L63 48L76 25L87 62H70L62 45L48 58L34 45L26 62H9Z" fill="#101421"/>
+    <path d="M48 5L63 48L57 43L48 18L39 43L33 48L48 5Z" fill="#1C2334"/>
+    <path d="M34 45L48 58L62 45L56 62H40L34 45Z" fill="#2A3448"/>
+    <circle cx="48" cy="70" r="6" fill="#D7A90B"/>
+    <path d="M72 30L81 62H76L67 38L72 30Z" fill="#00A9C8"/>
+  </g>
+  <text x="212" y="385" font-family="Arial" font-size="38" font-weight="800" letter-spacing="-1.1"><tspan fill="#101421">Hyper</tspan><tspan fill="#263043">AION</tspan></text>
+
+  <g transform="translate(640 318) scale(1.35)">
+    <path d="M9 62L20 25L33 48L48 5L63 48L76 25L87 62H70L62 45L48 58L34 45L26 62H9Z" fill="#101421"/>
+    <path d="M48 5L63 48L57 43L48 18L39 43L33 48L48 5Z" fill="#1C2334"/>
+    <path d="M34 45L48 58L62 45L56 62H40L34 45Z" fill="#2A3448"/>
+    <circle cx="48" cy="70" r="6" fill="#D7A90B"/>
+    <path d="M72 30L81 62H76L67 38L72 30Z" fill="#00A9C8"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" role="img" aria-label="HyperAION mark">
+  <title>HyperAION mark</title>
+  <path d="M8 74L24 33L36 74" stroke="#F4F6FA" stroke-width="9.4" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M60 74L72 33L88 74" stroke="#F4F6FA" stroke-width="9.4" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M31 66L48 17L65 66" stroke="#FFFFFF" stroke-width="10.4" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M15 43L39 61" stroke="#F4F6FA" stroke-width="7.8" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M81 43L57 61" stroke="#F4F6FA" stroke-width="7.8" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M34 70H62" stroke="#DCE4EE" stroke-width="7.8" stroke-linecap="square"/>
+  <circle cx="48" cy="82" r="7.3" fill="#FFD740"/>
+</svg>

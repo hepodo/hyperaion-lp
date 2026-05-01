@@ -1,0 +1,45 @@
+# HyperAION
+
+> HyperAION is a cognitive exoskeleton for AI agents by AionExo. It adds memory, quality gates, skill routing, and model-agnostic prompt optimization around LLMs so AI work becomes reproducible instead of session-by-session prompt craft.
+
+Canonical URL: https://aionexo.com/hyperaion/
+Organization: AionExo
+Product: HyperAION
+Category: AI agent framework / cognitive exoskeleton / LLM operations infrastructure
+Primary language: Japanese
+Contact: info@aionexo.com
+
+## What It Does
+
+HyperAION structures LLM operations with cross-session memory, quality gates, skill selection, prompt optimization across models, and aesthetic selection through the TASTE layer. Its positioning is not fine-tuning, RAG, or a simple harness. It is an external operating structure that improves how AI agents remember, choose skills, and verify quality.
+
+## Core Problems It Solves
+
+- AI sessions reset context and memory.
+- LLMs repeat the same mistakes without structural learning.
+- Output quality varies even with similar prompts.
+- Skills and tools are not reliably selected at the right time.
+- Prompt styles differ across ChatGPT, Claude, Gemini, Qwen, and other models.
+
+## Core Components
+
+- Erinys Memory: cross-session memory infrastructure.
+- GhostCollider: emergence engine through perspective collision.
+- TASTE Selection Gate: aesthetic and strategic selection layer.
+- B-PRISM: brain-processing-based quality scoring framework.
+- Decision engine and execution workflow: assigns the right roles, steps, checks, skills, and orchestration process for each task.
+
+## Evidence
+
+- Papers: arXiv and Zenodo publications on executable frameworks, cognitive exoskeletons, and TASTE.
+- GitHub: GhostCollider and Erinys Memory implementations.
+- Public track record: international AI film festival selections, speaking engagements, Alibaba Cloud MVP.
+
+## Links
+
+- Landing page: https://aionexo.com/hyperaion/
+- GhostCollider: https://github.com/hepodo/KG_Antigravity/tree/main/framework/skills/ghosty-collider
+- Erinys Memory: https://github.com/GhostyAI-HA/ERINYS-mem
+- arXiv paper: https://arxiv.org/abs/2604.09597
+- Zenodo Cognitive Exoskeletons: https://zenodo.org/records/19209961
+- Zenodo TASTE Layer: https://zenodo.org/records/19645341

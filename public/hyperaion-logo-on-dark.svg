@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" fill="none" role="img" aria-label="HyperAION logo">
+  <title>HyperAION</title>
+  <g transform="translate(10 8)">
+    <path d="M8 66L24 25L36 66" stroke="#F4F6FA" stroke-width="9.4" stroke-linejoin="miter" stroke-linecap="square"/>
+    <path d="M60 66L72 25L88 66" stroke="#F4F6FA" stroke-width="9.4" stroke-linejoin="miter" stroke-linecap="square"/>
+    <path d="M31 58L48 9L65 58" stroke="#FFFFFF" stroke-width="10.4" stroke-linejoin="miter" stroke-linecap="square"/>
+    <path d="M15 35L39 53" stroke="#F4F6FA" stroke-width="7.8" stroke-linejoin="miter" stroke-linecap="square"/>
+    <path d="M81 35L57 53" stroke="#F4F6FA" stroke-width="7.8" stroke-linejoin="miter" stroke-linecap="square"/>
+    <path d="M34 62H62" stroke="#DCE4EE" stroke-width="7.8" stroke-linecap="square"/>
+    <circle cx="48" cy="70" r="7.3" fill="#FFD740"/>
+  </g>
+  <text x="118" y="59" font-family="Arial" font-size="38" font-weight="800" letter-spacing="-1.1"><tspan fill="#EAEAF0">Hyper</tspan><tspan fill="#CDEFF6">AION</tspan></text>
+</svg>
